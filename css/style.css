@@ -1,0 +1,170 @@
+@import url('./reset.css');
+
+#wrap{width: 1000px; height: 650px; display: flex;}
+/* 왼쪽영역 */
+#wrap #right-wrap{width:200px; height: 100%; }
+/* 헤더 (top)로고영역 */
+#wrap #right-wrap .top{width: 100%; height: 100px;}
+#wrap #right-wrap .top h1{width: 100%; height: 100%; display: flex; align-items: center;}
+#wrap #right-wrap .top h1 a{width: 100%; height: 40px; }
+#wrap #right-wrap .top h1 a img{width: 100%; height: 100%;}
+/* 네비게이션영역 메인메뉴 마우스호버시 서브메뉴가 서서히 나타남 */
+#wrap #right-wrap .bottom{width: 100%; height: 550px; padding: 20px;}
+#wrap #right-wrap .bottom .main-meum{width: 100%; height: auto; display: flex; justify-content: center;}
+#wrap #right-wrap .bottom .main-meum > ul{width:100%; }
+#wrap #right-wrap .bottom .main-meum > ul >li{width: 100%; }
+#wrap #right-wrap .bottom .main-meum > ul >li:hover>a{background-color: bisque; color: #873c3c;}
+#wrap #right-wrap .bottom .main-meum > ul >li > a{display: flex; justify-content: center; align-items: center; border: 1px solid #333; width: 100%; height: 40px; font-size: 20px; font-weight: 500;text-align: center;}
+#wrap #right-wrap .bottom .main-meum > ul >li .sub{display:none; width: 100%; height: 100%;}
+#wrap #right-wrap .bottom .main-meum > ul >li .sub > ul{width: 100%; height: 100%; background-color: #eee;}
+#wrap #right-wrap .bottom .main-meum > ul >li .sub > ul li{width: 100%; height: 30px;}
+#wrap #right-wrap .bottom .main-meum > ul >li .sub > ul li:hover a{background-color: rgb(130, 133, 63); color: #f3f2f2;}
+#wrap #right-wrap .bottom .main-meum > ul >li .sub > ul li a{font-size: 16px;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+
+
+
+/* 오른쪽영역 */
+#wrap #left-wrap{width:800px; height: 100%; }
+/* 메인슬라이드영역 */
+#wrap #left-wrap #section1{width:100%; height: 350px;}
+#wrap #left-wrap #section1 .container{width:100%; height: 100%;}
+#wrap #left-wrap #section1 .container .content{width:100%; height: 100%; overflow: hidden;}
+#wrap #left-wrap #section1 .container .content .slide-wrap{
+    width: 500%; height: 100%; 
+    display: flex; 
+    position: relative; 
+    margin-left: -100%;
+    left:0;
+} /* ul 총 길이  */
+#wrap #left-wrap #section1 .container .content .slide-wrap .slide{
+    width: 100%; height: 100%; 
+background: url() no-repeat 50% 50%;
+border-radius: 20px;
+}
+
+/* 메인슬라이드 이미지 */
+#wrap #left-wrap #section1 .container .content .slide-wrap .slide1{
+    background-image: url(../images/[Slide]/img1.jpg);
+}
+#wrap #left-wrap #section1 .container .content .slide-wrap .slide2{
+    background-image: url(../images/[Slide]/img2.jpg);
+}
+#wrap #left-wrap #section1 .container .content .slide-wrap .slide3{
+    background-image: url(../images/[Slide]/img3.jpg);
+}
+
+#wrap #left-wrap #section1 .container .content .slide-wrap .slide a{}
+
+
+/* 콘텐츠영역 */
+#wrap #left-wrap #section2{
+    padding: 10px 0;
+    width:100%; height: 200px; display: flex;}
+/* 공지사항&갤러리영역 */
+#wrap #left-wrap #section2 .left{width:33.33%; height: 100%; }
+/* 공지사항갤러리버튼 */
+#wrap #left-wrap #section2 .left .container{width: 100%; height: 100%; position: relative; padding-top: 35px;}
+#wrap #left-wrap #section2 .left .container .title{
+    width: 100%; height: 36px; 
+    padding-left: 10px; 
+    position: absolute; 
+    top: 0; left: 0; 
+    display: flex;
+}
+#wrap #left-wrap #section2 .left .container .title button{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: auto; height: 100%; padding: 0 5px;
+    
+}
+#wrap #left-wrap #section2 .left .container .title button.notice-btn{
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+#wrap #left-wrap #section2 .left .container .title button.notice-btn.on{
+    background-color: #bbb; cursor: pointer;
+}
+#wrap #left-wrap #section2 .left .container .title button.gallery-btn{
+    background-color: #bbb; cursor: pointer;
+}
+#wrap #left-wrap #section2 .left .container .title button.gallery-btn.on{
+    background-color: #fff; cursor: default;
+    border-bottom: 1px solid #fff;
+}
+
+#wrap #left-wrap #section2 .left .container .content{
+    border: 1px solid #ccc;
+    width: 100%; height: 145px;  position: absolute;
+}
+
+#wrap #left-wrap #section2 .left .container .content .notice{width: 100%; height: 100%;}
+#wrap #left-wrap #section2 .left .container .content .notice .container{width: 100%; height: 100%; padding: 10px;}
+#wrap #left-wrap #section2 .left .container .content .notice .container ul{width: 100%; height: 100%; }
+#wrap #left-wrap #section2 .left .container .content .notice .container ul li::before{
+    content: '';
+    width: 3px;
+    height: 3px;
+    top: 50%;
+    left: 0;
+    margin-top: -1.5px;
+    background-color: #333;
+    position: absolute;
+    border-radius: 1.5px;
+}
+#wrap #left-wrap #section2 .left .container .content .notice .container ul li{
+    position: relative;
+    width: 100%; height: 25%;  border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center;}
+    #wrap #left-wrap #section2 .left .container .content .notice .container ul li a:hover{
+        text-decoration: underline;
+        color: rgb(0, 0, 255);
+    }
+    #wrap #left-wrap #section2 .left .container .content .notice .container ul li a{
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 14px;
+    display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+#wrap #left-wrap #section2 .left .container .content .notice .container ul li span{
+    font-size: 12px;
+}
+
+/* 갤러리영역 */
+#wrap #left-wrap #section2 .left .container .content .gallery{
+    display: none;
+    width: 100%; height: 100%; 
+}
+#wrap #left-wrap #section2 .left .container .content .gallery .container{width: 100%; height: 100%;display: flex; justify-content: center; align-items: center; padding: 10px;}
+#wrap #left-wrap #section2 .left .container .content .gallery .container ul{width: 100%; height: 100%; display: flex;}
+#wrap #left-wrap #section2 .left .container .content .gallery .container ul li{width: 33.333%; height: 100%; padding: 5px; }
+#wrap #left-wrap #section2 .left .container .content .gallery .container ul li a{width: 100%; height: 100%;}
+#wrap #left-wrap #section2 .left .container .content .gallery .container ul li a img{width: 100%; height: 100%; transition: all 0.3s;}
+#wrap #left-wrap #section2 .left .container .content .gallery .container ul li a:hover img{
+    transform: scale(1.1);
+}
+/* 바로가기영역 */
+#wrap #left-wrap #section2 .center{width:33.33%;height: 100%;  padding-left: 10px;}
+#wrap #left-wrap #section2 .center .container{width: 100%; height: 100%;}
+#wrap #left-wrap #section2 .center .container a{width: 100%; height: 100%;}
+#wrap #left-wrap #section2 .center .container a img{width: 100%; height: 100%; border: 1px solid #ccc; }
+
+/* 배너 영역 */
+#wrap #left-wrap #section2 .right{width:33.33%;height: 100%;  padding-left: 10px;}
+#wrap #left-wrap #section2 .right .container{width: 100%; height: 100%;}
+#wrap #left-wrap #section2 .right .container a{width: 100%; height: 100%;}
+#wrap #left-wrap #section2 .right .container a img{width: 100%; height: 100%; border: 1px solid #ccc; }
+/* 푸터영역 */
+#wrap #left-wrap #footer{width:100%; height: 100px;background-color: #eee; display: flex;}
+
+#wrap #left-wrap #footer .left{width:200px; height: 100px; }
+#wrap #left-wrap #footer .left h1{width: 100%; height: 100%; display: flex; align-items: center;}
+#wrap #left-wrap #footer .left a{width: 100%; height: 40px; }
+#wrap #left-wrap #footer .left h1 a img{width: 100%; height: 100%;}
+
+#wrap #left-wrap #footer .right{width:600px; height: 100px; }
+/* 푸터 오른쪽 영역 */
+#wrap #left-wrap #footer .right .title{width:100%; height: 50%; display: flex; justify-content: center;align-items: center;}
+#wrap #left-wrap #footer .right .title p{font-size: 11px; text-align: center;}
+#wrap #left-wrap #footer .right .content{width:100%; height: 50%; background-color: rgb(241, 241, 241);}
+#wrap #left-wrap #footer .right .content .banner{width:100%; height: 100%;display: flex; justify-content: center; align-items: center;}
+#wrap #left-wrap #footer .right .content .banner ul{width:100%; height: 100%; display: flex; }
+#wrap #left-wrap #footer .right .content .banner ul li{width:100%; height: 100%;}
+#wrap #left-wrap #footer .right .content .banner ul li a{width:100%; height: 100%; display: flex; justify-content: center; align-items: center;}
